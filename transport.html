@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phương tiện - Huế Heritage</title>
+    <link rel="icon" href="images/Logo-1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="loader"></div>
+        <h2>Huế Heritage</h2>
+        <p>Đang tải nội dung...</p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">Huế Heritage</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="about.html">Giới Thiệu</a></li>
+          <li><a href="cuisine.html">Ẩm Thực</a></li>
+          <li><a href="culture.html">Văn Hóa</a></li>
+          <li><a href="tourism.html">Du Lịch</a></li>
+          <li><a href="events.html">Sự Kiện</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle active">Dịch vụ</a>
+            <ul class="dropdown-menu">
+              <li><a href="tour-guide.html">Hướng Dẫn Du Lịch</a></li>
+              <li><a href="tour-booking.html">Đặt Tour</a></li>
+              <li><a href="hotel.html">Khách Sạn</a></li>
+              <li><a href="transport.html" class="active">Phương tiện</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+      <div class="weather-header">
+        <img id="weatherIcon" src="" alt="Weather Icon" />
+        <h3>Thời tiết Huế</h3>
+      </div>
+      <div class="weather-temp" id="weatherTemp">--°C</div>
+      <div class="weather-desc" id="weatherDesc">Đang tải...</div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      <span id="notificationText"></span>
+    </div>
+
+    <!-- Transport Section -->
+    <section class="section transport-section" id="transport">
+      <h2 class="section-title" data-aos="fade-up">Phương Tiện Di Chuyển Tại Huế</h2>
+      <div class="transport-grid">
+        <div class="transport-card" data-aos="fade-right">
+          <i class="fas fa-bus fa-2x"></i>
+          <h3>Xe Buýt</h3>
+          <p>Lịch trình: 6h - 18h | Giá vé: 7.000đ/lượt | Các tuyến kết nối Đại Nội - Chợ Đông Ba - Bến xe Phú Bài.</p>
+        </div>
+        <div class="transport-card" data-aos="fade-up">
+          <i class="fas fa-taxi fa-2x"></i>
+          <h3>Taxi</h3>
+          <p>Hãng: Mai Linh, Vinasun | Giá: ~15.000đ/km | Có thể đặt qua ứng dụng để được giảm giá.</p>
+        </div>
+        <div class="transport-card" data-aos="fade-left">
+          <i class="fas fa-motorcycle fa-2x"></i>
+          <h3>Thuê Xe Máy</h3>
+          <p>Giá từ 100.000đ/ngày | Cần giấy tờ tuỳ thân & mũ bảo hiểm | Tự do khám phá Huế theo cách riêng của bạn.</p>
+        </div>
+        <div class="transport-card" data-aos="fade-right">
+          <i class="fas fa-car-side fa-2x"></i>
+          <h3>Xe Du Lịch</h3>
+          <p>Đặt theo giờ hoặc ngày | Có tài xế | Phù hợp cho nhóm và gia đình.</p>
+        </div>
+        <div class="transport-card" data-aos="fade-left">
+          <i class="fas fa-bicycle fa-2x"></i>
+          <h3>Xe Đạp</h3>
+          <p>Giá rẻ, thân thiện môi trường | Phù hợp tham quan Đại Nội, sông Hương, chùa Thiên Mụ.</p>
+        </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-crown"></i> Huế Heritage</h4>
+            <p>
+              Nền tảng chia sẻ văn hóa và di sản của cố đô Huế. Chúng tôi cam kết
+              bảo tồn và quảng bá những giá trị văn hóa quý báu của dân tộc.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Liên Kết Nhanh</h4>
+            <p><a href="about.html">Giới Thiệu</a></p>
+            <p><a href="culture.html">Địa điểm</a></p>
+            <p><a href="cuisine.html">Ẩm Thực</a></p>
+            <p><a href="#contact">Liên Hệ</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Dịch Vụ</h4>
+            <p><a href="tour-guide.html">Hướng Dẫn Du Lịch</a></p>
+            <p><a href="tour-booking.html">Đặt Tour</a></p>
+            <p><a href="hotel.html">Khách Sạn</a></p>
+            <p><a href="transport.html">Phương tiện</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Thông Tin</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế</p>
+            <p><i class="fas fa-phone"></i> +84 942 972 709</p>
+            <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2025 Huế Heritage. Tất cả quyền được bảo lưu. | Thiết kế bởi Huế
+            Heritage Team
+          </p>
+        </div>
+      </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khách Sạn - Huế Heritage</title>
+    <link rel="icon" href="images/Logo-1.png" type="image/png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="loader"></div>
+        <h2>Huế Heritage</h2>
+        <p>Đang tải nội dung...</p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">Huế Heritage</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+          <li><a href="cuisine.html" class="nav-link">Ẩm Thực</a></li>
+          <li><a href="culture.html" class="nav-link">Văn Hóa</a></li>
+          <li><a href="tourism.html" class="nav-link">Du Lịch</a></li>
+          <li><a href="events.html" class="nav-link">Sự Kiện</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle active">Dịch vụ</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="tour-guide.html" class="nav-link">Hướng Dẫn Du Lịch</a>
+              </li>
+              <li><a href="tour-booking.html" class="nav-link">Đặt Tour</a></li>
+              <li>
+                <a href="hotel.html" class="nav-link active">Khách Sạn</a>
+              </li>
+              <li><a href="transport.html" class="nav-link">Phương tiện</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+      <div class="weather-header">
+        <img id="weatherIcon" src="" alt="Weather Icon" />
+        <h3>Thời tiết Huế</h3>
+      </div>
+      <div class="weather-temp" id="weatherTemp">--°C</div>
+      <div class="weather-desc" id="weatherDesc">Đang tải...</div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      <span id="notificationText"></span>
+    </div>
+
+    <section class="section hotel-section" id="hotel">
+        <h2 class="section-title" data-aos="fade-up">Khách Sạn Tại Huế</h2>
+    
+        <!-- Danh sách khách sạn (ảnh trái, mô tả phải) -->
+        <div class="hotel-list-vertical">
+            <div class="hotel-row" data-aos="fade-right">
+                <img src="https://morinhotel.com.vn/wp-content/uploads/2019/06/Anh-mat-tien-morin-moi.jpg" alt="Hotel Saigon Morin" class="hotel-thumb">
+                <div class="hotel-details">
+                    <h3>Hotel Saigon Morin</h3>
+                    <p><strong>Địa chỉ:</strong> 30 Lê Lợi, TP. Huế</p>
+                    <p><strong>Giá:</strong> ~1.500.000 VNĐ/đêm</p>
+                    <p><strong>Tiện ích:</strong> Hồ bơi, nhà hàng Á-Âu</p>
+                    <a href="tour-booking.html" class="btn-book">Đặt ngay</a>
+                </div>
+            </div>
+    
+            <div class="hotel-row" data-aos="fade-right" data-aos-delay="100">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/173375328.jpg?k=ef05bdc9e64392f24ac0c7383bf886a107f5de9cf409b62e6887321923236410&o=&hp=1" alt="Indochine Palace" class="hotel-thumb">
+                <div class="hotel-details">
+                    <h3>Indochine Palace</h3>
+                    <p><strong>Địa chỉ:</strong> 105A Hùng Vương, TP. Huế</p>
+                    <p><strong>Giá:</strong> ~2.000.000 VNĐ/đêm</p>
+                    <p><strong>Tiện ích:</strong> Spa, view sông Hương</p>
+                    <a href="tour-booking.html" class="btn-book">Đặt ngay</a>
+                </div>
+            </div>
+    
+            <div class="hotel-row" data-aos="fade-right" data-aos-delay="200">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLjl-nnjzQyZMW5LaSjTn3u5kP6xQi7I94Xg&s" alt="Huế Serene Palace" class="hotel-thumb">
+                <div class="hotel-details">
+                    <h3>Huế Serene Palace</h3>
+                    <p><strong>Địa chỉ:</strong> 5 Lê Lợi, TP. Huế</p>
+                    <p><strong>Giá:</strong> ~1.200.000 VNĐ/đêm</p>
+                    <p><strong>Tiện ích:</strong> Wifi miễn phí, gần Đại Nội</p>
+                    <a href="tour-booking.html" class="btn-book">Đặt ngay</a>
+                </div>
+            </div>
+
+        <!-- 4. Eldora Hotel -->
+    <div class="hotel-row" data-aos="fade-right" data-aos-delay="300">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/30471201.jpg?k=56800f69cd751d09b28101fa24d3e9ea8d4f3141094a3464cc046a51d6cb546a&o=&hp=1" alt="Eldora Hotel" class="hotel-thumb">
+        <div class="hotel-details">
+            <h3>Eldora Hotel</h3>
+            <p><strong>Địa chỉ:</strong> 60 Bến Nghé, TP. Huế</p>
+            <p><strong>Giá:</strong> ~1.700.000 VNĐ/đêm</p>
+            <p><strong>Tiện ích:</strong> Phong cách cổ điển Pháp, hồ bơi trong nhà</p>
+            <a href="tour-booking.html" class="btn-book">Đặt ngay</a>
+        </div>
+    </div>
+
+    <!-- 5. Alba Spa Hotel -->
+    <div class="hotel-row" data-aos="fade-right" data-aos-delay="400">
+        <img src="https://www.albaboutiquehotels.com/index.php/assets/Uploads/medias/_resampled/CroppedImage1140450-ASH-Shot-23-Hot-Jacuzzi-C5A2323-Horizontal-Finish.png" alt="Alba Spa Hotel" class="hotel-thumb">
+        <div class="hotel-details">
+            <h3>Alba Spa Hotel</h3>
+            <p><strong>Địa chỉ:</strong> 29 Trần Quang Khải, TP. Huế</p>
+            <p><strong>Giá:</strong> ~1.400.000 VNĐ/đêm</p>
+            <p><strong>Tiện ích:</strong> Suối khoáng nóng, massage kiểu Nhật</p>
+            <a href="tour-booking.html" class="btn-book">Đặt ngay</a>
+        </div>
+    </div>
+        </div>
+    
+       
+
+    </section>
+    
+
+   <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4><i class="fas fa-crown"></i> Huế Heritage</h4>
+        <p>
+          Nền tảng chia sẻ văn hóa và di sản của cố đô Huế. Chúng tôi cam kết
+          bảo tồn và quảng bá những giá trị văn hóa quý báu của dân tộc.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Liên Kết Nhanh</h4>
+        <p><a href="about.html">Giới Thiệu</a></p>
+        <p><a href="culture.html">Địa điểm</a></p>
+        <p><a href="cuisine.html">Ẩm Thực</a></p>
+        <p><a href="#contact">Liên Hệ</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Dịch Vụ</h4>
+        <p><a href="tour-guide.html">Hướng Dẫn Du Lịch</a></p>
+        <p><a href="tour-booking.html">Đặt Tour</a></p>
+        <p><a href="hotel.html">Khách Sạn</a></p>
+        <p><a href="transport.html">Phương tiện</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Thông Tin</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế</p>
+        <p><i class="fas fa-phone"></i> +84 942 972 709</p>
+        <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        © 2025 Huế Heritage. Tất cả quyền được bảo lưu. | Thiết kế bởi Huế
+        Heritage Team
+      </p>
+    </div>
+  </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sự Kiện - Huế Heritage</title>
+    <link rel="icon" href="images/Logo-1.png" type="image/png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/event.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="loader"></div>
+        <h2>Huế Heritage</h2>
+        <p>Đang tải nội dung...</p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">Huế Heritage</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+          <li><a href="cuisine.html" class="nav-link">Ẩm Thực</a></li>
+          <li><a href="culture.html" class="nav-link">Văn Hóa</a></li>
+          <li><a href="tourism.html" class="nav-link active">Du Lịch</a></li>
+          <li><a href="events.html" class="nav-link">Sự Kiện</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Dịch vụ</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="tour-guide.html" class="nav-link">Hướng Dẫn Du Lịch</a>
+              </li>
+              <li><a href="tour-booking.html" class="nav-link">Đặt Tour</a></li>
+              <li><a href="hotel.html" class="nav-link">Khách Sạn</a></li>
+              <li><a href="transport.html" class="nav-link">Phương tiện</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+      <div class="weather-header">
+        <i class="fas fa-sun" style="color: var(--accent-color)"></i>
+        <h3>Thời tiết Huế</h3>
+      </div>
+      <div class="weather-temp">28°C</div>
+      <div class="weather-desc">Nắng đẹp</div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      <span id="notificationText"></span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 data-aos="fade-up">Sự Kiện Huế</h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+          Khám phá những lễ hội văn hóa độc đáo và sự kiện đặc sắc của cố đô Huế
+        </p>
+        <a
+          href="#featured"
+          class="hero-cta"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          >Khám phá ngay</a
+        >
+      </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="featured-section" id="featured">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Sự Kiện Nổi Bật</h2>
+
+        <div class="filter-bar" data-aos="fade-up" data-aos-delay="100">
+          <button class="filter-btn active" data-filter="all">Tất cả</button>
+          <button class="filter-btn" data-filter="festival">Lễ hội</button>
+          <button class="filter-btn" data-filter="cultural">Văn hóa</button>
+          <button class="filter-btn" data-filter="food">Ẩm thực</button>
+          <button class="filter-btn" data-filter="music">Âm nhạc</button>
+        </div>
+
+        <div class="events-grid" id="eventsGrid">
+          <!-- Festival Huế -->
+          <div class="event-card" data-category="festival" data-aos="fade-up">
+            <div class="event-image">
+              <img
+                src="https://dntt.mediacdn.vn/197608888129458176/2024/5/30/2024-5-20-festival2024-3-1716555011326313942103-17170421589061017656828.jpg"
+                alt="Cảnh lễ hội Festival Huế với các tiết mục nghệ thuật"
+                loading="lazy"
+              />
+              <div class="event-date">
+                <div>15-23</div>
+                <div>Tháng 6</div>
+              </div>
+              <div class="event-category">Lễ hội</div>
+            </div>
+            <div class="event-content">
+              <h3>Festival Huế 2025</h3>
+              <p>
+                Lễ hội văn hóa quốc tế lớn nhất của cố đô Huế, quy tụ nghệ sĩ
+                trong và ngoài nước với các chương trình nghệ thuật đặc sắc.
+              </p>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i>Đại Nội Huế</span>
+                <span><i class="fas fa-clock"></i>9 ngày</span>
+              </div>
+              <button
+                class="event-btn"
+                onclick="openModal('Festival Huế 2025', 'Festival Huế là sự kiện văn hóa lớn nhất của cố đô, diễn ra 2 năm một lần. Năm 2025 sẽ có các hoạt động đặc biệt như trình diễn nhã nhạc cung đình, show áo dài, pháo hoa và các chương trình nghệ thuật quốc tế.')"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+
+          <!-- Ca Huế trên sông -->
+          <div
+            class="event-card"
+            data-category="cultural"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="event-image">
+              <img
+                src="https://bizweb.dktcdn.net/100/101/075/articles/hue-3e48ae39-6292-4cdd-a5e8-ccf34b9e05e2.jpg?v=1558343103230"
+                alt="Ca Huế trên thuyền rồng dọc sông Hương"
+                loading="lazy"
+              />
+              <div class="event-date">
+                <div>Hàng</div>
+                <div>Tối</div>
+              </div>
+              <div class="event-category">Văn hóa</div>
+            </div>
+            <div class="event-content">
+              <h3>Ca Huế Trên Sông Hương</h3>
+              <p>
+                Trải nghiệm đặc sắc nghe ca Huế trên thuyền rồng dọc sông Hương,
+                thưởng thức âm nhạc cung đình trong không gian thơ mộng.
+              </p>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i>Sông Hương</span>
+                <span><i class="fas fa-clock"></i>1.5 giờ</span>
+              </div>
+              <button
+                class="event-btn"
+                onclick="openModal('Ca Huế Trên Sông Hương', 'Ca Huế trên thuyền rồng là trải nghiệm văn hóa độc đáo, với các nghệ sĩ ca Huế trình diễn những bài hát dân gian truyền thống. Thuyền khởi hành từ bến Tòa Khâm, đi dọc sông Hương với cảnh quan tuyệt đẹp.')"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+
+          <!-- Hội Ẩm Thực -->
+          <div
+            class="event-card"
+            data-category="food"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="event-image">
+              <img
+                src="https://media.vov.vn/sites/default/files/styles/large/public/2022-06/am-thuc-hue.jpg"
+                alt="Các món ăn đặc trưng tại Hội Ẩm Thực Huế"
+                loading="lazy"
+              />
+              <div class="event-date">
+                <div>20-22</div>
+                <div>Tháng 7</div>
+              </div>
+              <div class="event-category">Ẩm thực</div>
+            </div>
+            <div class="event-content">
+              <h3>Hội Ẩm Thực Huế</h3>
+              <p>
+                Lễ hội ẩm thực quy tụ các món ăn đặc trưng Huế như bún bò, bánh
+                bèo, chè, cùng các workshop nấu ăn với đầu bếp nổi tiếng.
+              </p>
+              <div class="event-meta">
+                <span
+                  ><i class="fas fa-map-marker-alt"></i>Công viên Thương
+                  Bạc</span
+                >
+                <span><i class="fas fa-clock"></i>3 ngày</span>
+              </div>
+              <button
+                class="event-btn"
+                onclick="openModal('Hội Ẩm Thực Huế', 'Hội Ẩm Thực Huế mang đến cơ hội thưởng thức và học cách chế biến các món ăn truyền thống. Có hơn 50 gian hàng, workshop nấu ăn và các cuộc thi ẩm thực hấp dẫn.')"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+
+          <!-- Nhã Nhạc Cung Đình -->
+          <div
+            class="event-card"
+            data-category="music"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="event-image">
+              <img
+                src="https://khamphahue.com.vn/Portals/0/Medias/Nam2022/T10/Khamphahue_NhaNhacCungDinhHue_DiSanPhiVatTheTruyenKhauCuaNhanLoai-1.jpg"
+                alt="Biểu diễn nhã nhạc cung đình tại Đại Nội"
+                loading="lazy"
+              />
+              <div class="event-date">
+                <div>Cuối tuần</div>
+                <div>Hàng tuần</div>
+              </div>
+              <div class="event-category">Âm nhạc</div>
+            </div>
+            <div class="event-content">
+              <h3>Nhã Nhạc Cung Đình</h3>
+              <p>
+                Biểu diễn nhã nhạc cung đình - di sản văn hóa phi vật thể của
+                nhân loại, tái hiện không gian âm nhạc hoàng gia xưa.
+              </p>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i>Đại Nội</span>
+                <span><i class="fas fa-clock"></i>45 phút</span>
+              </div>
+              <button
+                class="event-btn"
+                onclick="openModal('Nhã Nhạc Cung Đình', 'Nhã Nhạc Cung Đình là di sản văn hóa phi vật thể được UNESCO công nhận, tái hiện âm nhạc cung đình triều Nguyễn. Các buổi biểu diễn diễn ra tại Đại Nội, mang đến trải nghiệm văn hóa độc đáo với trang phục và nhạc cụ truyền thống.')"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+
+          <!-- Lễ Hội Đèn Lồng Huế -->
+          <div
+            class="event-card"
+            data-category="festival"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="event-image">
+              <img
+                src="https://vov2.vov.vn/sites/default/files/styles/large/public/2023-09/den-long-dai-noi-hue.jpg"
+                alt="Lễ hội đèn lồng rực rỡ bên sông Hương"
+                loading="lazy"
+              />
+              <div class="event-date">
+                <div>15-16</div>
+                <div>Tháng 8</div>
+              </div>
+              <div class="event-category">Lễ hội</div>
+            </div>
+            <div class="event-content">
+              <h3>Lễ Hội Đèn Lồng Huế</h3>
+              <p>
+                Lễ hội đèn lồng rực rỡ bên sông Hương, với hàng ngàn đèn lồng
+                lung linh và các hoạt động thả đèn trên sông.
+              </p>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i>Sông Hương</span>
+                <span><i class="fas fa-clock"></i>2 ngày</span>
+              </div>
+              <button
+                class="event-btn"
+                onclick="openModal('Lễ Hội Đèn Lồng Huế', 'Lễ Hội Đèn Lồng Huế là sự kiện đặc sắc với hàng ngàn đèn lồng được thắp sáng dọc sông Hương. Du khách có thể tham gia thả đèn, thưởng thức âm nhạc dân gian và khám phá các gian hàng thủ công truyền thống.')"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+
+          <!-- Triển Lãm Áo Dài Truyền Thống -->
+          <div
+            class="event-card"
+            data-category="cultural"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="event-image">
+              <img
+                src="https://bcp.cdnchinhphu.vn/334894974524682240/2024/8/12/aodai5-16916606940861126723286-1723458854972886630471.jpg"
+                alt="Triển lãm áo dài truyền thống tại Huế"
+                loading="lazy"
+              />
+              <div class="event-date">
+                <div>10-12</div>
+                <div>Tháng 6</div>
+              </div>
+              <div class="event-category">Văn hóa</div>
+            </div>
+            <div class="event-content">
+              <h3>Triển Lãm Áo Dài Truyền Thống</h3>
+              <p>
+                Triển lãm tôn vinh vẻ đẹp áo dài Việt Nam, trưng bày các thiết
+                kế truyền thống và hiện đại, kết hợp biểu diễn thời trang.
+              </p>
+              <div class="event-meta">
+                <span
+                  ><i class="fas fa-map-marker-alt"></i>Trung tâm Văn hóa
+                  Huế</span
+                >
+                <span><i class="fas fa-clock"></i>3 ngày</span>
+              </div>
+              <button
+                class="event-btn"
+                onclick="openModal('Triển Lãm Áo Dài Truyền Thống', 'Triển Lãm Áo Dài Truyền Thống giới thiệu các mẫu áo dài từ thời Nguyễn đến hiện đại, với các buổi trình diễn thời trang và workshop thiết kế áo dài. Sự kiện diễn ra tại Trung tâm Văn hóa Huế, thu hút các nhà thiết kế và du khách.')"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+
+          <!-- Lớp Học Nấu Ăn Huế -->
+          <div
+            class="event-card"
+            data-category="food"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="event-image">
+              <img
+                src="https://khamphahue.com.vn/Portals/0/Media/T7/upload/VHDL/AmThuc/NhaHang-Cf/2015/Hue%20Inn%20Side%20Out/KPH_Hue%20Inn%20Side%20Out3.jpg"
+                alt="Lớp học nấu ăn món Huế truyền thống"
+                loading="lazy"
+              />
+              <div class="event-date">
+                <div>Hàng</div>
+                <div>Tuần</div>
+              </div>
+              <div class="event-category">Ẩm thực</div>
+            </div>
+            <div class="event-content">
+              <h3>Lớp Học Nấu Ăn Huế</h3>
+              <p>
+                Tham gia lớp học nấu các món ăn đặc trưng Huế như bánh khoái,
+                chè Huế, dưới sự hướng dẫn của các đầu bếp chuyên nghiệp.
+              </p>
+              <div class="event-meta">
+                <span
+                  ><i class="fas fa-map-marker-alt"></i>Trường Ẩm thực Huế</span
+                >
+                <span><i class="fas fa-clock"></i>2 giờ</span>
+              </div>
+              <button
+                class="event-btn"
+                onclick="openModal('Lớp Học Nấu Ăn Huế', 'Lớp Học Nấu Ăn Huế mang đến trải nghiệm thực hành chế biến các món ăn truyền thống như bánh khoái, bún bò Huế, và chè Huế. Các đầu bếp chuyên nghiệp sẽ hướng dẫn chi tiết, phù hợp cho cả người mới bắt đầu.')"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+
+          <!-- Đêm Thơ Huế -->
+          <div
+            class="event-card"
+            data-category="cultural"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
+            <div class="event-image">
+              <img
+                src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/485414TuO/anh-mo-ta.png"
+                alt="Đêm thơ Huế với không gian thơ mộng"
+                loading="lazy"
+              />
+              <div class="event-date">
+                <div>25</div>
+                <div>Tháng 7</div>
+              </div>
+              <div class="event-category">Văn hóa</div>
+            </div>
+            <div class="event-content">
+              <h3>Đêm Thơ Huế</h3>
+              <p>
+                Một buổi tối thơ mộng với các bài thơ về Huế, kết hợp âm nhạc và
+                không gian lãng mạn bên sông Hương.
+              </p>
+              <div class="event-meta">
+                <span><i class="fas fa-map-marker-alt"></i>Bến Văn Lâu</span>
+                <span><i class="fas fa-clock"></i>2 giờ</span>
+              </div>
+              <button
+                class="event-btn"
+                onclick="openModal('Đêm Thơ Huế', 'Đêm Thơ Huế là sự kiện văn hóa đặc biệt, nơi các nhà thơ và nghệ sĩ trình bày những bài thơ ca ngợi vẻ đẹp cố đô, kết hợp với âm nhạc dân gian trong không gian lãng mạn bên sông Hương.')"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+
+          <!-- Chợ Đêm Huế -->
+          <div
+            class="event-card"
+            data-category="festival"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
+            <div class="event-image">
+              <img
+                src="https://aeonmall-review-rikkei.cdn.vccloud.vn/website/21/articles/March2025/WEJUMcEMgUj6Z5kPb4Ze.jpg"
+                alt="Chợ đêm Huế với các gian hàng sôi động"
+                loading="lazy"
+              />
+              <div class="event-date">
+                <div>Hàng</div>
+                <div>Đêm</div>
+              </div>
+              <div class="event-category">Lễ hội</div>
+            </div>
+            <div class="event-content">
+              <h3>Chợ Đêm Huế</h3>
+              <p>
+                Chợ đêm sôi động với các gian hàng ẩm thực, thủ công mỹ nghệ và
+                biểu diễn nghệ thuật đường phố.
+              </p>
+              <div class="event-meta">
+                <span
+                  ><i class="fas fa-map-marker-alt"></i>Phố đi bộ Nguyễn Đình
+                  Chiểu</span
+                >
+                <span><i class="fas fa-clock"></i>4 giờ</span>
+              </div>
+              <button
+                class="event-btn"
+                onclick="openModal('Chợ Đêm Huế', 'Chợ Đêm Huế là điểm đến lý tưởng để khám phá ẩm thực, thủ công mỹ nghệ và văn hóa đường phố. Các buổi biểu diễn nghệ thuật đường phố và các gian hàng đặc sản tạo nên không khí sôi động và hấp dẫn.')"
+              >
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monthly Events -->
+    <section class="monthly-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Sự Kiện Theo Tháng</h2>
+        <div class="monthly-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="month-card">
+            <h3 class="month-title">Tháng 6</h3>
+            <ul class="event-list">
+              <li>
+                <span class="event-name">Festival Huế 2025</span>
+                <span class="event-date-small">15-23/6</span>
+              </li>
+              <li>
+                <span class="event-name">Triển lãm Áo dài</span>
+                <span class="event-date-small">10-12/6</span>
+              </li>
+            </ul>
+          </div>
+          <div class="month-card">
+            <h3 class="month-title">Tháng 7</h3>
+            <ul class="event-list">
+              <li>
+                <span class="event-name">Hội Ẩm Thực Huế</span>
+                <span class="event-date-small">20-22/7</span>
+              </li>
+              <li>
+                <span class="event-name">Đêm Thơ Huế</span>
+                <span class="event-date-small">25/7</span>
+              </li>
+            </ul>
+          </div>
+          <div class="month-card">
+            <h3 class="month-title">Tháng 8</h3>
+            <ul class="event-list">
+              <li>
+                <span class="event-name">Lễ hội Đèn lồng</span>
+                <span class="event-date-small">15-16/8</span>
+              </li>
+              <li>
+                <span class="event-name">Ca Huế trên sông</span>
+                <span class="event-date-small">Hàng tối</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="eventModal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">×</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4><i class="fas fa-crown"></i> Huế Heritage</h4>
+          <p>
+            Nền tảng chia sẻ văn hóa và di sản của cố đô Huế. Chúng tôi cam kết
+            bảo tồn và quảng bá những giá trị văn hóa quý báu của dân tộc.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Liên Kết Nhanh</h4>
+          <p><a href="about.html">Giới Thiệu</a></p>
+          <p><a href="culture.html">Địa điểm</a></p>
+          <p><a href="cuisine.html">Ẩm Thực</a></p>
+          <p><a href="#contact">Liên Hệ</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>Dịch Vụ</h4>
+          <p><a href="tour-guide.html">Hướng Dẫn Du Lịch</a></p>
+          <p><a href="tour-booking.html">Đặt Tour</a></p>
+          <p><a href="hotel.html">Khách Sạn</a></p>
+          <p><a href="transport.html">Phương tiện</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>Thông Tin</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế
+          </p>
+          <p><i class="fas fa-phone"></i> +84 942 972 709</p>
+          <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2025 Huế Heritage. Tất cả quyền được bảo lưu. | Thiết kế bởi Huế
+          Heritage Team
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init();
+
+      // Preloader
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 500);
+      });
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const navLinks = document.getElementById("navLinks");
+      mobileMenuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        const isExpanded = navLinks.classList.contains("active");
+        mobileMenuBtn.setAttribute("aria-expanded", isExpanded);
+        mobileMenuBtn.querySelector("i").classList.toggle("fa-bars");
+        mobileMenuBtn.querySelector("i").classList.toggle("fa-times");
+      });
+
+      // Filter Events
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const eventCards = document.querySelectorAll(".event-card");
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+          const filter = button.getAttribute("data-filter");
+          eventCards.forEach((card) => {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || filter === category) {
+              card.style.display = "block";
+              card.setAttribute("data-aos", "fade-up");
+              AOS.refresh();
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Modal
+      const modal = document.getElementById("eventModal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDescription = document.getElementById("modalDescription");
+
+      function openModal(title, description) {
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modal.style.display = "flex";
+        modal.querySelector(".modal-content").classList.add("scale-in");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        modal.querySelector(".modal-content").classList.remove("scale-in");
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Notification
+      function showNotification(message) {
+        const notification = document.getElementById("notification");
+        const notificationText = document.getElementById("notificationText");
+        notificationText.textContent = message;
+        notification.classList.add("show");
+        setTimeout(() => {
+          notification.classList.remove("show");
+        }, 3000);
+      }
+
+      // Scroll to Top
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add("visible");
+        } else {
+          scrollTopBtn.classList.remove("visible");
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Weather Widget Animation
+      window.addEventListener("load", () => {
+        const weatherWidget = document.getElementById("weatherWidget");
+        weatherWidget.classList.add("show");
+      });
+
+      // Example notification on page load
+      showNotification("Chào mừng bạn đến với Huế Heritage!");
+    </script>
+  </body>
+</html>

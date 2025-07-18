@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huế - Kinh Đô Di Sản</title>
+    <link rel="icon" href="images/Logo-1.png" type="image/png">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style-index.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="loader"></div>
+        <h2>Huế Heritage</h2>
+        <p>Đang tải nội dung...</p>
+      </div>
+    </div>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+      <div class="weather-header">
+        <i class="fas fa-cloud-sun"></i>
+        <span>Thời tiết Huế</span>
+      </div>
+      <div class="weather-content">
+        <img
+          id="weatherIcon"
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="Weather Icon"
+          style="width: 50px; height: 50px"
+        />
+        <div class="weather-temp" id="weatherTemp">--°C</div>
+        <div class="weather-desc" id="weatherDesc">Đang tải...</div>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      <i class="fas fa-info-circle"></i>
+      <span id="notificationText">Chào mừng đến với Huế Heritage!</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">Huế Heritage</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+                <li><a href="cuisine.html" class="nav-link">Ẩm Thực</a></li>
+                <li><a href="culture.html" class="nav-link">Văn Hóa</a></li>
+                <li><a href="tourism.html" class="nav-link">Du Lịch</a></li>
+                <li><a href="events.html" class="nav-link">Sự Kiện</a></li>
+                <li><a href="#video" class="nav-link">Video</a></li>
+                <li><a href="#contact" class="nav-link">Liên Hệ</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Dịch vụ</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tour-guide.html" class="nav-link">Hướng Dẫn Du Lịch</a></li>
+                        <li><a href="tour-booking.html" class="nav-link">Đặt Tour</a></li>
+                        <li><a href="hotel.html" class="nav-link">Khách Sạn</a></li>
+                        <li><a href="transport.html" class="nav-link">Phương tiện</a></li>
+                    </ul>
+                    
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="hero-content">
+        <h1>Huế - Kinh Đô Di Sản</h1>
+        <div class="hero-subtitle">Cố Đô Ngàn Năm Văn Hiến</div>
+        <p>
+          Huế, thành phố di sản văn hóa thế giới, nơi lưu giữ những giá trị lịch
+          sử, văn hóa và ẩm thực đặc sắc của Việt Nam. Với dòng sông Hương thơ
+          mộng, những công trình kiến trúc cổ kính và nền ẩm thực cung đình tinh
+          tế, Huế là điểm đến không thể bỏ qua.
+        </p>
+        <div class="hero-buttons">
+          <a href="#about" class="cta-button">
+            <i class="fas fa-compass"></i> Khám Phá Ngay
+          </a>
+          <a href="#video" class="cta-button cta-secondary">
+            <i class="fas fa-play"></i> Xem Video
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section section fade-in">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="700">0</span>
+          <div class="stat-label">Năm Lịch Sử</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="6">0</span>
+          <div class="stat-label">Danh hiệu UNESCO</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="1700">0</span>
+          <div class="stat-label">Món Ăn Truyền Thống</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3900000">0</span>
+          <div class="stat-label">Du Khách/Năm</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+      <h2>Về Cố Đô Huế</h2>
+      <div class="card-grid">
+        <div class="card slide-in-left">
+          <i class="fas fa-map-marker-alt card-icon"></i>
+          <h3>Vị Trí Địa Lý</h3>
+          <p>
+            Nằm ở miền Trung Việt Nam. Giáp với biển
+            Đông, Quảng Trị, Đà Nẵng và dãy Trường Sơn. Vị trí đắc địa với khí
+            hậu nhiệt đới gió mùa, thuận lợi cho du lịch quanh năm.
+          </p>
+        </div>
+        <div class="card scale-in">
+          <i class="fas fa-crown card-icon"></i>
+          <h3>Lịch Sử</h3>
+          <p>
+            Kinh đô của Việt Nam dưới triều Nguyễn (1802 - 1945). Được UNESCO
+            công nhận là Di sản Văn hóa Thế giới năm 1993. Nơi lưu giữ 13 lăng
+            tẩm hoàng gia và hàng trăm di tích lịch sử quý báu.
+          </p>
+        </div>
+        <div class="card slide-in-right">
+          <i class="fas fa-theater-masks card-icon"></i>
+          <h3>Văn Hóa</h3>
+          <p>
+            Nhã nhạc cung đình Huế, áo dài Huế thanh lịch, và các lễ hội truyền
+            thống như Festival Huế, lễ hội điện Hòn Chén. Nghệ thuật ca Huế,
+            cung đình trang trí và kiến trúc độc đáo.
+          </p>
+        </div>
+        <div class="card slide-in-left">
+          <i class="fas fa-water card-icon"></i>
+          <h3>Sông Hương</h3>
+          <p>
+            Dòng sông biểu tượng với 30km uốn lượn qua thành phố. Nơi diễn ra
+            các hoạt động du thuyền ngắm cảnh, lễ hội đua thuyền và thưởng thức
+            ca Huế trên sông.
+          </p>
+        </div>
+        <div class="card scale-in">
+          <i class="fas fa-graduation-cap card-icon"></i>
+          <h3>Giáo Dục</h3>
+          <p>
+            Trung tâm giáo dục của miền Trung với Đại học Huế, Đại học Y Dược và
+            nhiều trường đại học uy tín. Nơi đào tạo nguồn nhân lực chất lượng
+            cao.
+          </p>
+        </div>
+        <div class="card slide-in-right">
+          <i class="fas fa-leaf card-icon"></i>
+          <h3>Môi Trường</h3>
+          <p>
+            Thành phố xanh với nhiều công viên, vườn hoa và không gian xanh.
+            Chính quyền địa phương luôn chú trọng bảo vệ môi trường và phát
+            triển bền vững.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section section fade-in">
+      <h2>Địa điểm</h2>
+      <div class="gallery-grid">
+        <div
+          class="gallery-item"
+          onclick="openModal('Đại Nội Huế', 'Quần thể kiến trúc cung đình hoành tráng')"
+        >
+          <img
+            src="https://dulichconvoi.com/wp-content/uploads/2022/12/du-lich-hue8-1.jpg"
+            alt="Đại Nội Huế"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-text">
+              <h4>Đại Nội Huế</h4>
+              <p>Quần thể cung đình triều Nguyễn</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openModal('Chùa Thiên Mụ', 'Biểu tượng tâm linh của Huế')"
+        >
+          <img
+            src="https://ik.imagekit.io/tvlk/blog/2023/06/chua-thien-mu-1.jpg?tr=dpr-2,w-675"
+            alt="Chùa Thiên Mụ"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-text">
+              <h4>Chùa Thiên Mụ</h4>
+              <p>Tháp Phước Duyên 7 tầng nổi tiếng</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openModal('Lăng Khải Định', 'Kiến trúc Đông Tây kết hợp')"
+        >
+          <img
+            src="https://disantrangan.vn/wp-content/uploads/2021/11/lang_khai_dinh_hue_06.jpg"
+            alt="Lăng Khải Định"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-text">
+              <h4>Lăng Khải Định</h4>
+              <p>Kiến trúc Đông Tây độc đáo</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openModal('Lăng Tự Đức', 'Lăng tẩm lớn nhất triều Nguyễn')"
+        >
+          <img
+            src="https://bazaarvietnam.vn/wp-content/uploads/2019/07/2019227-lang-Tu-Duc-05.jpg"
+            alt="Lăng Tự Đức"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-text">
+              <h4>Lăng Tự Đức</h4>
+              <p>Lăng tẩm lớn nhất triều Nguyễn</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openModal('Chợ Đông Ba', 'Chợ truyền thống lớn nhất')"
+        >
+          <img
+            src="https://huesmiletravel.com.vn/wp-content/uploads/2019/07/cho-dong-ba-1.jpg"
+            alt="Chợ Đông Ba"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-text">
+              <h4>Chợ Đông Ba</h4>
+              <p>Chợ truyền thống sầm uất</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openModal('Cầu Tràng Tiền', 'Biểu tượng kiến trúc Pháp')"
+        >
+          <img
+            src="https://vietluxtour.com/Upload/images/2024/khamphatrongnuoc/c%E1%BA%A7u%20Tr%C3%A0ng%20Ti%E1%BB%81n%20Hu%E1%BA%BF/cau-trang-tien-hue%20(2)-min.jpg"
+            alt="Cầu Tràng Tiền"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-text">
+              <h4>Cầu Tràng Tiền</h4>
+              <p>Cầu sắt cổ nổi tiếng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuisine Section -->
+    <section id="cuisine" class="food-section section fade-in">
+      <h2>Ẩm Thực Huế</h2>
+      <div class="food-showcase">
+        <div class="food-card">
+          <div class="food-image">
+            <img
+              src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1715247598/dsrfwm7gzt4skwajzkay.webp"
+              alt="Bún Bò Huế"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Bún Bò Huế</h4>
+            <p>
+              Món ngon đậm vị với nước dùng đậm đà ruốc, sợi bún gạo nhỏ đặc
+              trưng và đầy đủ thịt bò, giò heo, chả Huế. Được phục vụ với rau
+              sống và mắm ruốc đặc biệt.
+            </p>
+            <div class="food-price">35,000 - 50,000 VNĐ</div>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-image">
+            <img
+              src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1718595549/kwyqyvmyqbakewuel18g.webp"
+              alt="Cơm Hến"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Cơm Hến</h4>
+            <p>
+              Món ăn dân dã với sự kết hợp hài hòa giữa vị ngọt của hến, vị chua
+              của xoài xanh và gia vị đặc trưng. Ăn kèm với rau thơm và bánh
+              tráng nướng.
+            </p>
+            <div class="food-price">20,000 - 30,000 VNĐ</div>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-image">
+            <img
+              src="https://amthucdochay.com/wp-content/uploads/2021/10/5f3f927c7b7c2.jpg"
+              alt="Bánh Bèo"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Bánh Bèo</h4>
+            <p>
+              Tinh hoa ẩm thực cung đình với bánh được đúc mỏng, tôm chấy đỏ rực
+              và mỡ hành xanh mướt. Ăn kèm với nước mắm pha đặc biệt của Huế.
+            </p>
+            <div class="food-price">25,000 - 40,000 VNĐ</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Video Section -->
+   <section class="section video-section" id="video">
+    <h2 data-aos="fade-up">Video Giới Thiệu Huế</h2>
+    <div class="video-container" data-aos="fade-up" data-aos-delay="100">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/K1ie-Vgss-Q" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section fade-in">
+      <h2>Liên Hệ & Thông Tin</h2>
+      <div class="contact-grid">
+        <div class="contact-form">
+          <h3>Gửi Tin Nhắn</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Họ và Tên</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Số Điện Thoại</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="message">Tin Nhắn</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Để lại tin nhắn của bạn..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Gửi Tin Nhắn
+            </button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4>Địa Chỉ</h4>
+              <p>Phong Thái,Phong Điền,Thành phố Huế</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h4>Điện Thoại</h4>
+              <p>+84 935 546 419<br />+84 942 972 709 </p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>phutrong2937@gmail.com<br />tammath@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div>
+              <h4>Giờ Làm Việc</h4>
+              <p>Thứ 2 - Chủ nhật: 8:00 - 18:00<br />Lễ, Tết: 9:00 - 17:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4><i class="fas fa-crown"></i> Huế Heritage</h4>
+          <p>
+            Nền tảng chia sẻ văn hóa và di sản của cố đô Huế. Chúng tôi cam kết
+            bảo tồn và quảng bá những giá trị văn hóa quý báu của dân tộc.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Liên Kết Nhanh</h4>
+          <p><a href="#about">Giới Thiệu</a></p>
+          <p><a href="#">Địa điểm</a></p>
+          <p><a href="#cuisine">Ẩm Thực</a></p>
+          <p><a href="#contact">Liên Hệ</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>Dịch Vụ</h4>
+          <p><a href="tour-guide.html">Hướng Dẫn Du Lịch</a></p>
+          <p><a href="tour-booking.html">Đặt Tour</a></p>
+          <p><a href="hotel.html">Khách Sạn</a></p>
+          <p><a href="transport.html">Phương tiện</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>Thông Tin</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế</p>
+          <p><i class="fas fa-phone"></i> +84 942 972 709</p>
+          <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2025 Huế Heritage. Tất cả quyền được bảo lưu. | Thiết kế bởi Huế
+          Heritage Team
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Modal for Gallery -->
+    <div
+      id="galleryModal"
+      class="modal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        class="modal-content"
+        style="
+          background: var(--glass-bg);
+          padding: 2rem;
+          border-radius: 20px;
+          max-width: 500px;
+          text-align: center;
+          position: relative;
+        "
+      >
+        <span
+          class="close"
+          onclick="closeModal()"
+          style="
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--accent-color);
+            cursor: pointer;
+          "
+          >×</span
+        >
+        <h3
+          id="modalTitle"
+          style="color: var(--accent-color); margin-bottom: 1rem"
+        ></h3>
+        <p id="modalDesc" style="color: var(--text-light)"></p>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

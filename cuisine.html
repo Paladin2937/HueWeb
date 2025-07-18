@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ẩm Thực - Huế Heritage</title>
+    <link rel="icon" href="images/Logo-1.png" type="image/png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="loader"></div>
+        <h2>Huế Heritage</h2>
+        <p>Đang tải nội dung...</p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">Huế Heritage</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+          <li><a href="cuisine.html" class="nav-link">Ẩm Thực</a></li>
+          <li><a href="culture.html" class="nav-link">Văn Hóa</a></li>
+          <li><a href="tourism.html" class="nav-link">Du Lịch</a></li>
+          <li><a href="events.html" class="nav-link">Sự Kiện</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle active">Dịch vụ</a>
+            <ul class="dropdown-menu">
+              <li><a href="tour-guide.html" class="nav-link">Hướng Dẫn Du Lịch</a></li>
+              <li><a href="tour-booking.html" class="nav-link active">Đặt Tour</a></li>
+              <li><a href="hotel.html" class="nav-link">Khách Sạn</a></li>
+              <li><a href="transport.html" class="nav-link">Phương tiện</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+      <div class="weather-header">
+        <img id="weatherIcon" src="" alt="Weather Icon" />
+        <h3>Thời tiết Huế</h3>
+      </div>
+      <div class="weather-temp" id="weatherTemp">--°C</div>
+      <div class="weather-desc" id="weatherDesc">Đang tải...</div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      <span id="notificationText"></span>
+    </div>
+
+    <!-- Cuisine Section -->
+    <section class="section food-section" id="cuisine">
+      <h2 data-aos="fade-up">Ẩm Thực Huế</h2>
+      <div class="filter-bar" data-aos="fade-up" data-aos-delay="100">
+        <select id="categoryFilter">
+          <option value="all">Tất cả</option>
+          <option value="main">Món chính</option>
+          <option value="snack">Món ăn vặt</option>
+          <option value="dessert">Tráng miệng</option>
+        </select>
+        <select id="priceFilter">
+          <option value="all">Tất cả giá</option>
+          <option value="low">Dưới 30,000 VNĐ</option>
+          <option value="medium">30,000 - 60,000 VNĐ</option>
+          <option value="high">Trên 60,000 VNĐ</option>
+        </select>
+      </div>
+      <div class="food-showcase" id="foodShowcase">
+        <div
+          class="food-card"
+          data-category="main"
+          data-price="medium"
+          data-aos="fade-up"
+        >
+          <div class="food-image" onclick="openRecipeModal('Bún bò Huế', 'Một số quán gợi ý', 'Bún Mệ Kéo - 20 Bạch Đằng, Phường Phú Cát, TP Huế, Bún bò Bà Tuyết - 47 Nguyễn Công Trứ, Phú Hội, TP Huế', 'https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1715247598/dsrfwm7gzt4skwajzkay.webp')">
+            <img
+              src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1715247598/dsrfwm7gzt4skwajzkay.webp"
+              alt="Bún Bò Huế"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Bún Bò Huế</h4>
+            <p>
+              Món ngon đậm vị với nước dùng đậm đà ruốc, sợi bún gạo nhỏ đặc
+              trưng và đầy đủ thịt bò, giò heo, chả Huế.
+            </p>
+            <div class="food-price">20,000 - 50,000 VNĐ</div>
+          </div>
+        </div>
+        <div
+          class="food-card"
+          data-category="main"
+          data-price="low"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="food-image" onclick="openRecipeModal('Cơm Hến', 'Một số quán gợi ý', 'Cơm hến Hoa Đông - 64 Kiệt 7 Ưng Bình,Phường Vỹ Dạ, TP Huế', 'https://daynauan.info.vn/wp-content/uploads/2016/07/com-hen.jpg')">
+            <img
+              src="https://daynauan.info.vn/wp-content/uploads/2016/07/com-hen.jpg"
+              alt="Cơm Hến"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Cơm Hến</h4>
+            <p>
+              Món ăn dân dã với sự kết hợp hài hòa giữa vị ngọt của hến, vị chua
+              của xoài xanh và gia vị đặc trưng.
+            </p>
+            <div class="food-price">10,000 - 20,000 VNĐ</div>
+          </div>
+        </div>
+        <div
+          class="food-card"
+          data-category="snack"
+          data-price="low"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="food-image" onclick="openRecipeModal('Bánh Bèo', 'Một số quán gợi ý', 'Huế Xưa - 1 Nguyễn Bỉnh Khiêm, Phú Cát, TP Huế', 'https://cdn.tgdd.vn/Files/2017/03/21/963426/cach-lam-banh-beo-thom-ngon-202110041645542724.jpg')">
+            <img
+              src="https://cdn.tgdd.vn/Files/2017/03/21/963426/cach-lam-banh-beo-thom-ngon-202110041645542724.jpg"
+              alt="Bánh Bèo"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Bánh Bèo</h4>
+            <p>
+              Bánh bèo mềm mịn, phủ tôm chấy, mỡ hành, ăn kèm nước mắm ngọt đặc
+              trưng của Huế.
+            </p>
+            <div class="food-price">10,000 - 25,000 VNĐ</div>
+          </div>
+        </div>
+        <div
+          class="food-card"
+          data-category="dessert"
+          data-price="medium"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div class="food-image" onclick="openRecipeModal('Chè Huế', 'Một số quán gợi ý', 'Chè Hẻm – 1 kiệt,29 Hùng Vương,Phú Hội,Thành phố Huế  Chè Huế 20 món Ngọc Hiền – 67 Trần Hưng Đạo, phường Phú Hòa, thành phố Huế', 'https://danviet.ex-cdn.com/files/f1/296231569849192448/2022/6/6/photo-1-16534568477021851069032-1654478027061-1654478027587601696021.jpg')">
+            <img
+              src="https://danviet.ex-cdn.com/files/f1/296231569849192448/2022/6/6/photo-1-16534568477021851069032-1654478027061-1654478027587601696021.jpg"
+              alt="Chè Huế"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Chè Huế</h4>
+            <p>
+              Món tráng miệng đa dạng với hơn 20 loại chè, từ chè đậu xanh đến
+              chè bắp ngọt ngào.
+            </p>
+            <div class="food-price">10,000 - 30,000 VNĐ</div>
+          </div>
+        </div>
+        <div class="food-card" data-category="snack" data-price="low" data-aos="fade-up">
+          <div class="food-image" onclick="openRecipeModal('Bánh Ép', 'Một số quán gợi ý', '20 Nguyễn Du - 37D Nguyễn Du, Tổ 16, Thành phố Huế Bánh ép Huế Gia Di - 4 Phùng Chí Kiên, Xuân Phú, Thành phố Huế', 'https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1718595489/cr3xzmbzabmkyo9ge6qh.webp')">
+            <img
+              src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1718595489/cr3xzmbzabmkyo9ge6qh.webp"
+              alt="Bánh Ép"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Bánh Ép</h4>
+            <p>
+              Món ăn vặt nổi tiếng với hương thơm hấp dẫn, ăn kèm nước mắm gia
+              truyền và rau tươi. Được làm từ bánh tráng nướng giòn tan trong
+              miệng.
+            </p>
+            <div class="food-price">10,000 - 15,000 VNĐ</div>
+          </div>
+        </div>
+        <div class="food-card" data-category="main" data-price="medium" data-aos="fade-up" data-aos-delay="100">
+          <div class="food-image" onclick="openRecipeModal('Bánh Canh Nam Phổ', 'Một số quán gợi ý', 'Thúy - Bánh Canh Nam Phổ - 16 Phạm Hồng Thái, Vĩnh Ninh, Thành phố Huế', 'https://i2.ex-cdn.com/crystalbay.com/files/content/2024/09/18/banh-canh-nam-pho-1-1501.jpeg')">
+            <img
+              src="https://i2.ex-cdn.com/crystalbay.com/files/content/2024/09/18/banh-canh-nam-pho-1-1501.jpeg"
+              alt="Bánh Canh Nam Phổ"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Bánh Canh Nam Phổ</h4>
+            <p>
+              Món ăn bình dân với sợi bánh canh dai ngon, nước dùng đậm đà từ
+              xương heo và tôm tươi. Đặc sản của vùng Nam Phổ, ngoại ô Huế.
+            </p>
+            <div class="food-price">10,000 - 20,000 VNĐ</div>
+          </div>
+        </div>
+        <div class="food-card" data-category="snack" data-price="medium" data-aos="fade-up" data-aos-delay="200">
+          <div class="food-image" onclick="openRecipeModal('Bánh Khoái', 'Một số quán gợi ý', ' Bánh khoái Hồng Mai - 78 Đinh Tiên Hoàng – Thành phố Huế', 'https://ik.imagekit.io/tvlk/blog/2018/03/dac-san-hue-14-banh-khoai.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2')">
+            <img
+              src="https://ik.imagekit.io/tvlk/blog/2018/03/dac-san-hue-14-banh-khoai.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2"
+              alt="Bánh Khoái"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Bánh Khoái</h4>
+            <p>
+              Bánh xèo nhỏ đặc trưng của Huế, giòn rụm bên ngoài, bên trong có
+              tôm thịt và giá đỗ. Ăn kèm với rau sống và nước lèo được làm từ gan heo, thịt nạc băm nhuyễn, mè rang, đậu phộng giã nhuyễn cùng nước tương đậu nành Huế chính gốc..
+            </p>
+            <div class="food-price">20,000 - 40,000 VNĐ</div>
+          </div>
+        </div>
+        <div class="food-card" data-category="main" data-price="high" data-aos="fade-up" data-aos-delay="300">
+          <div class="food-image" onclick="openRecipeModal('Cơm Âm Phủ', 'Một số quán gợi ý', 'Quán cơm âm phủ Dì Thu - 37 Sơn La Phu Tử,Phường Tây Lộc, Thành phố Huế', 'https://ticotravel.com.vn/wp-content/uploads/2022/05/Com-am-phu-Hue-1.jpg')">
+            <img
+              src="https://ticotravel.com.vn/wp-content/uploads/2022/05/Com-am-phu-Hue-1.jpg"
+              alt="Cơm Âm Phủ"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Cơm Âm Phủ</h4>
+            <p>
+              Món cơm đặc biệt với nhiều loại thịt và rau củ, được trình bày đẹp
+              mắt. Tên gọi độc đáo và hương vị khó quên của ẩm thực Huế.
+            </p>
+            <div class="food-price">20,000 - 30,000 VNĐ</div>
+          </div>
+        </div>
+        <div class="food-card" data-category="snack" data-price="high" data-aos="fade-up">
+          <div class="food-image" onclick="openRecipeModal('Nem Lụi', 'Một số quán gợi ý', 'Quán Bà Tý - 81 Đào Duy Từ, thành phố Huế', 'https://kalite.vn/wp-content/uploads/2022/05/cachlamnemluinuong-e1653549352272.jpg')">
+            <img
+              src="https://kalite.vn/wp-content/uploads/2022/05/cachlamnemluinuong-e1653549352272.jpg"
+              alt="Nem Lụi"
+            />
+          </div>
+          <div class="food-content">
+            <h4>Nem Lụi</h4>
+            <p>
+              Thịt heo tươi được nướng trên que tre, ăn kèm với bánh tráng, rau
+              sống và nước chấm đậm đà. Món ăn không thể thiếu trong tiệc cưới
+              Huế.
+            </p>
+            <div class="food-price">40,000 - 80,000 VNĐ</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Specialties Section -->
+    <section class="section food-section" id="specialties">
+        <h2 data-aos="fade-up">Đặc Sản Huế</h2>
+        <h3 data-aos="fade-up" data-aos-delay="100" >Khám phá những món ăn đặc trưng, mang đậm hồn Huế, được yêu thích bởi du khách trong và ngoài nước.</h3>
+        <div class="food-showcase" id="specialtiesShowcase">
+          <div class="food-card" data-category="snack" data-price="medium" data-aos="fade-up">
+            <div class="food-image">
+              <img src="https://hue.gov.vn/Portals/0/Uploads/00.00.H57/Nam2025/Thang3/BeoNamLocHue_dacsanhue_18_4_2023_18_36_33_718_CH.jpg" alt="Bánh Nậm" />
+            </div>
+            <div class="food-content">
+              <h4>Bánh Nậm , Bánh Lọc </h4>
+              <p>Bánh nậm và bánh lọc được làm từ gạo, nhân tôm thịt, gói trong lá chuối, ăn kèm nước mắm chua ngọt.</p>
+              <div class="food-price">15,000 - 30,000 VNĐ</div>
+            </div>
+          </div>
+          <div class="food-card" data-category="snack" data-price="medium" data-aos="fade-up" data-aos-delay="100">
+            <div class="food-image">
+              <img src="https://t2.ex-cdn.com/crystalbay.com/resize/560x315/files/content/2024/11/05/me-xung-hue-1-1202.jpg" alt="Mè xửng" />
+            </div>
+            <div class="food-content">
+              <h4>Mè Xửng</h4>
+              <p>Đặc sản mè xửng Huế có tên gọi theo nguyên liệu chính là mè và cách làm xửng (cách hoán đường cô đặc dẻo).</p>
+              <div class="food-price">20,000 - 40,000 VNĐ</div>
+            </div>
+          </div>
+          <div class="food-card" data-category="main" data-price="high" data-aos="fade-up" data-aos-delay="200">
+            <div class="food-image">
+              <img src="https://statics.vinwonders.com/mam-hue-4_1702381962.jpg" alt="Mắm Tôm Chua" />
+            </div>
+            <div class="food-content">
+              <h4>Mắm Tôm Chua</h4>
+              <p>Món mắm đặc sản lên men từ tôm, ăn kèm rau sống và bánh tráng, mang hương vị độc đáo.</p>
+              <div class="food-price">50,000 - 100,000 VNĐ</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Recipe Modal -->
+    <div class="modal" id="recipeModal">
+      <div class="modal-content scale-in">
+        <span class="close-modal" onclick="closeRecipeModal()">×</span>
+        <div class="modal-image"><img id="modalImage" src="" alt="Food Image"></div>
+        <h3 id="recipeTitle" class="modal-title"></h3>
+        <p id="recipeDesc" class="modal-description"></p>
+        <div id="recipePrice" class="modal-price"></div>
+      </div>
+    </div>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-crown"></i> Huế Heritage</h4>
+            <p>
+              Nền tảng chia sẻ văn hóa và di sản của cố đô Huế. Chúng tôi cam kết
+              bảo tồn và quảng bá những giá trị văn hóa quý báu của dân tộc.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Liên Kết Nhanh</h4>
+            <p><a href="about.html">Giới Thiệu</a></p>
+            <p><a href="culture.html">Địa điểm</a></p>
+            <p><a href="cuisine.html">Ẩm Thực</a></p>
+            <p><a href="#contact">Liên Hệ</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Dịch Vụ</h4>
+            <p><a href="tour-guide.html">Hướng Dẫn Du Lịch</a></p>
+            <p><a href="tour-booking.html">Đặt Tour</a></p>
+            <p><a href="hotel.html">Khách Sạn</a></p>
+            <p><a href="transport.html">Phương tiện</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Thông Tin</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế</p>
+            <p><i class="fas fa-phone"></i> +84 942 972 709</p>
+            <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2025 Huế Heritage. Tất cả quyền được bảo lưu. | Thiết kế bởi Huế
+            Heritage Team
+          </p>
+        </div>
+      </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

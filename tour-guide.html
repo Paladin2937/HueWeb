@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Du Lịch - Huế Heritage</title>
+    <link rel="icon" href="images/Logo-1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="loader"></div>
+            <h2>Huế Heritage</h2>
+            <p>Đang tải nội dung...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">Huế Heritage</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+                <li><a href="cuisine.html" class="nav-link">Ẩm Thực</a></li>
+                <li><a href="culture.html" class="nav-link">Văn Hóa</a></li>
+                <li><a href="tourism.html" class="nav-link">Du Lịch</a></li>
+                <li><a href="events.html" class="nav-link">Sự Kiện</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active">Dịch vụ</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tour-guide.html" class="nav-link active">Hướng Dẫn Du Lịch</a></li>
+                        <li><a href="tour-booking.html" class="nav-link">Đặt Tour</a></li>
+                        <li><a href="hotel.html" class="nav-link">Khách Sạn</a></li>
+                        <li><a href="transport.html" class="nav-link">Vận Chuyển</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-header">
+            <img id="weatherIcon" src="" alt="Weather Icon">
+            <h3>Thời tiết Huế</h3>
+        </div>
+        <div class="weather-temp" id="weatherTemp">--°C</div>
+        <div class="weather-desc" id="weatherDesc">Đang tải...</div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span id="notificationText"></span>
+    </div>
+
+
+<!-- Guide Section -->
+<section class="section guide-section" id="guide">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Hướng Dẫn Du Lịch Huế</h2>
+        <div class="guide-steps-new" data-aos="fade-up" data-aos-delay="100">
+            <div class="step">
+                <div class="icon-circle">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="step-content">
+                    <h4>Chuẩn bị hành trình</h4>
+                    <p>Xác định thời gian và các điểm đến như Đại Nội (mở cửa 7h00-17h00), sông Hương (thuyền rồng khởi hành 16h00), và lăng Tự Đức (liên hệ trước qua +84 234 352 2993). Đề xuất thời gian tốt nhất là mùa xuân 2025 để tham gia Festival Huế.<br><br>
+                    Nên kiểm tra dự báo thời tiết Huế trước 3–5 ngày. Mang theo dù nhỏ, áo khoác nhẹ, thuốc chống muỗi, pin dự phòng và tiền mặt vì một số nơi không hỗ trợ chuyển khoản. Lên lịch trình khoa học: sáng tham quan lăng, trưa nghỉ ngơi, chiều ra sông Hương hoặc chợ Đông Ba, tối ăn đặc sản và nghe nhã nhạc.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="icon-circle">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <div class="step-content">
+                    <h4>Đặt vé và lưu trú</h4>
+                    <p>Đặt tour qua trang <a href="tour-booking.html">Đặt Tour</a> hoặc khách sạn tại <a href="hotel.html">Khách Sạn</a>. Vé tham quan Đại Nội: 150.000 VNĐ/người lớn, miễn phí cho trẻ em dưới 6 tuổi.<br><br>
+                    Gợi ý khách sạn:
+                    <ul>
+                      <li><strong>Silk Path Grand Hue:</strong> 5 sao, gần Đại Nội, có hồ bơi và spa.</li>
+                      <li><strong>Thanh Lịch Royal:</strong> Giá hợp lý, dịch vụ tốt, gần trung tâm.</li>
+                      <li><strong>Beaulieu Boutique Hotel:</strong> View đẹp, tiện nghi hiện đại.</li>
+                    </ul>
+                    Có thể đặt phòng qua Traveloka, Booking.com, hoặc website chính thức của khách sạn.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="icon-circle">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="step-content">
+                    <h4>Khám phá văn hóa</h4>
+                    <p>Tham gia Festival Huế 2025 (dự kiến 25/3/2025) với pháo hoa và nhã nhạc cung đình tại bờ sông Hương. Mang theo áo dài để hòa mình vào không khí truyền thống.<br><br>
+                    Các hoạt động nổi bật:
+                    <ul>
+                      <li>Xem <strong>nhã nhạc cung đình</strong> tại Nhà hát Duyệt Thị Đường.</li>
+                      <li>Chụp ảnh áo dài tại cầu Tràng Tiền và phố cổ Bao Vinh.</li>
+                      <li>Tham gia <strong>thả đèn hoa đăng</strong> cầu nguyện tại sông Hương.</li>
+                      <li>Mua quà lưu niệm tại <strong>làng hương Thủy Xuân</strong> và <strong>làng nón Tây Hồ</strong>.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="icon-circle">
+                    <i class="fas fa-bus"></i>
+                </div>
+                <div class="step-content">
+                    <h4>Di chuyển an toàn</h4>
+                    <p>Sử dụng xe buýt (tuyến 1: Đại Nội - Chợ Đông Ba, giá 7.000 VNĐ) hoặc taxi (Mai Linh: 0234 389 8989). Tránh di chuyển vào giờ cao điểm (16h00-18h00).<br><br>
+                    Gợi ý phương tiện:
+                    <ul>
+                      <li><strong>Taxi:</strong> Mai Linh, Thành Công – giá niêm yết, gọi nhanh.</li>
+                      <li><strong>Xe máy thuê:</strong> 100.000–150.000 VNĐ/ngày, cần CMND/hộ chiếu.</li>
+                      <li><strong>Đi bộ:</strong> Tuyến đi bộ đẹp: Đại Nội → cầu Tràng Tiền → phố Nguyễn Đình Chiểu (nhiều quán cà phê, check-in đẹp).</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-crown"></i> Huế Heritage</h4>
+            <p>
+              Nền tảng chia sẻ văn hóa và di sản của cố đô Huế. Chúng tôi cam kết
+              bảo tồn và quảng bá những giá trị văn hóa quý báu của dân tộc.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Liên Kết Nhanh</h4>
+            <p><a href="about.html">Giới Thiệu</a></p>
+            <p><a href="culture.html">Địa điểm</a></p>
+            <p><a href="cuisine.html">Ẩm Thực</a></p>
+            <p><a href="#contact">Liên Hệ</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Dịch Vụ</h4>
+            <p><a href="tour-guide.html">Hướng Dẫn Du Lịch</a></p>
+            <p><a href="tour-booking.html">Đặt Tour</a></p>
+            <p><a href="hotel.html">Khách Sạn</a></p>
+            <p><a href="transport.html">Phương tiện</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Thông Tin</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế</p>
+            <p><i class="fas fa-phone"></i> +84 942 972 709</p>
+            <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2025 Huế Heritage. Tất cả quyền được bảo lưu. | Thiết kế bởi Huế
+            Heritage Team
+          </p>
+        </div>
+      </footer>
+      
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

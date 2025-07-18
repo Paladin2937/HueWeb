@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Tour - Huế Heritage</title>
+    <link rel="icon" href="images/Logo-1.png" type="image/png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="loader"></div>
+        <h2>Huế Heritage</h2>
+        <p>Đang tải nội dung...</p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">Huế Heritage</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+          <li><a href="cuisine.html" class="nav-link">Ẩm Thực</a></li>
+          <li><a href="culture.html" class="nav-link">Văn Hóa</a></li>
+          <li><a href="tourism.html" class="nav-link">Du Lịch</a></li>
+          <li><a href="events.html" class="nav-link">Sự Kiện</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle active">Dịch vụ</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="tour-guide.html" class="nav-link">Hướng Dẫn Du Lịch</a>
+              </li>
+              <li>
+                <a href="tour-booking.html" class="nav-link active">Đặt Tour</a>
+              </li>
+              <li><a href="hotel.html" class="nav-link">Khách Sạn</a></li>
+              <li><a href="transport.html" class="nav-link">Phương tiện</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+      <div class="weather-header">
+        <img id="weatherIcon" src="" alt="Weather Icon" />
+        <h3>Thời tiết Huế</h3>
+      </div>
+      <div class="weather-temp" id="weatherTemp">--°C</div>
+      <div class="weather-desc" id="weatherDesc">Đang tải...</div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      <span id="notificationText"></span>
+    </div>
+
+    <!-- Booking Section -->
+    <section class="section booking-section" id="booking">
+      <h2 data-aos="fade-up">Đặt Tour Du Lịch Huế</h2>
+      <div class="booking-form" data-aos="fade-up" data-aos-delay="100">
+        <form>
+          <div class="form-group">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="date">Ngày đi:</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="people">Số người:</label>
+            <input type="number" id="people" name="people" min="1" required />
+          </div>
+          <div class="form-group">
+            <label for="tour">Loại tour:</label>
+            <select id="tour" name="tour" required>
+              <option value="">Chọn tour</option>
+              <option value="dai-noi">
+                Đại Nội & Lăng Tẩm - 500.000 VNĐ/ngày
+              </option>
+              <option value="song-huong">
+                Sông Hương & Ca Huế - 300.000 VNĐ/ngày
+              </option>
+              <option value="festival">
+                Festival Huế 2025 - 700.000 VNĐ/ngày
+              </option>
+            </select>
+          </div>
+          <button type="submit" class="cta-button">Đặt Ngay</button>
+        </form>
+        <p
+          style="
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--text-light);
+            opacity: 0.8;
+          "
+        >
+          Liên hệ:
+          <a href="mailto:booking@hue-heritage.vn">booking@hue-heritage.vn</a> |
+          Hotline: +84 234 123 456 (24/7)
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-crown"></i> Huế Heritage</h4>
+            <p>
+              Nền tảng chia sẻ văn hóa và di sản của cố đô Huế. Chúng tôi cam kết
+              bảo tồn và quảng bá những giá trị văn hóa quý báu của dân tộc.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Liên Kết Nhanh</h4>
+            <p><a href="about.html">Giới Thiệu</a></p>
+            <p><a href="culture.html">Địa điểm</a></p>
+            <p><a href="cuisine.html">Ẩm Thực</a></p>
+            <p><a href="#contact">Liên Hệ</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Dịch Vụ</h4>
+            <p><a href="tour-guide.html">Hướng Dẫn Du Lịch</a></p>
+            <p><a href="tour-booking.html">Đặt Tour</a></p>
+            <p><a href="hotel.html">Khách Sạn</a></p>
+            <p><a href="transport.html">Phương tiện</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Thông Tin</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế</p>
+            <p><i class="fas fa-phone"></i> +84 942 972 709</p>
+            <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2025 Huế Heritage. Tất cả quyền được bảo lưu. | Thiết kế bởi Huế
+            Heritage Team
+          </p>
+        </div>
+      </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

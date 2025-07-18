@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - Huế Heritage</title>
+    <link rel="icon" href="images/Logo-1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="loader"></div>
+            <h2>Huế Heritage</h2>
+            <p>Đang tải nội dung...</p>
+        </div>
+    </div>
+
+   <!-- Header -->
+   <header class="header">
+    <nav class="nav">
+        <a href="index.html" class="logo">Huế Heritage</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+            <li><a href="cuisine.html" class="nav-link">Ẩm Thực</a></li>
+            <li><a href="culture.html" class="nav-link">Văn Hóa</a></li>
+            <li><a href="tourism.html" class="nav-link">Du Lịch</a></li>
+            <li><a href="events.html" class="nav-link">Sự Kiện</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle active">Dịch vụ</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tour-guide.html" class="nav-link">Hướng Dẫn Du Lịch</a></li>
+                    <li><a href="tour-booking.html" class="nav-link active">Đặt Tour</a></li>
+                    <li><a href="hotel.html" class="nav-link">Khách Sạn</a></li>
+                    <li><a href="transport.html" class="nav-link">Phương tiện</a></li>
+                </ul>
+            </li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+</header>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-header">
+            <img id="weatherIcon" src="" alt="Weather Icon">
+            <h3>Thời tiết Huế</h3>
+        </div>
+        <div class="weather-temp" id="weatherTemp">--°C</div>
+        <div class="weather-desc" id="weatherDesc">Đang tải...</div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <h2 data-aos="fade-up">Giới Thiệu Huế </h2>
+        <div class="about-intro" data-aos="fade-up" data-aos-delay="100">
+            <p>Huế – cố đô của Việt Nam – là một thành phố giàu giá trị lịch sử, văn hóa và nghệ thuật. Nằm bên dòng sông Hương thơ mộng, 
+                Huế từng là trung tâm chính trị, văn hóa và tôn giáo của triều đại nhà Nguyễn trong suốt hơn một thế kỷ. 
+                Thành phố nổi tiếng với quần thể di tích Cố đô Huế – Di sản Văn hóa Thế giới được UNESCO công nhận – bao gồm Kinh thành, Hoàng thành, các lăng tẩm và chùa chiền cổ kính. 
+                Không chỉ lưu giữ những nét đẹp truyền thống, Huế còn làm say lòng du khách với ẩm thực tinh tế, nhã nhạc cung đình độc đáo và con người hiền hòa, mến khách. Huế là điểm đến lý tưởng cho những ai yêu thích sự thanh bình, sâu lắng và muốn tìm về cội nguồn văn hóa dân tộc.
+            </p>
+        </div>
+
+        <h3 data-aos="fade-up" data-aos-delay="200">Lịch Sử Huế</h3>
+        <div class="about-history timeline" data-aos="fade-up" data-aos-delay="300">
+            <dl>
+                <div class="timeline-item">
+                    <dt><strong>1802-1945</strong></dt>
+                    <dd>Triều đại nhà Nguyễn chọn Huế làm kinh đô, xây dựng Kinh thành Huế đồ sộ, nơi định đô của 13 đời vua.</dd>
+                </div>
+                <div class="timeline-item">
+                    <dt><strong>Năm 1954</strong></dt>
+                    <dd>Kết thúc thời kỳ triều Nguyễn sau Hiệp định Genève, đánh dấu sự chuyển giao lịch sử.</dd>
+                </div>
+                <div class="timeline-item">
+                    <dt><strong>Năm 1993</strong></dt>
+                    <dd>UNESCO công nhận Huế là Di sản Văn hóa Thế giới.</dd>
+                </div>
+                <div class="timeline-item">
+                    <dt><strong>Năm 2003</strong></dt>
+                    <dd>Nhã nhạc cung đình Huế được UNESCO công nhận là Di sản Phi vật thể đại diện nhân loại.</dd>
+                </div>
+                <div class="timeline-item">
+                    <dt><strong>Năm 2009</strong></dt>
+                    <dd>Mộc bản triều Nguyễn được công nhận là Di sản Tư liệu Thế giới (Chương trình Memory of the World).</dd>
+                </div>
+                <div class="timeline-item">
+                    <dt><strong>Năm 2014</strong></dt>
+                    <dd>Châu bản triều Nguyễn được công nhận là Di sản Tư liệu Thế giới.</dd>
+                </div>
+                <div class="timeline-item">
+                    <dt><strong>Năm 2016</strong></dt>
+                    <dd>Thơ văn trên kiến trúc Cung đình Huế được ghi danh Di sản tư liệu.</dd>
+                </div>
+                <div class="timeline-item">
+                    <dt><strong>Năm 2025</strong></dt>
+                    <dd> Thừa Thiên Huế trở thành Thành phố trực thuộc Trung ương theo Nghị quyết của Bộ Chính trị.</dd>
+                </div>
+            </dl>
+        </div>
+
+        <h3 data-aos="fade-up" data-aos-delay="400">Vì Sao Huế Đặc Biệt?</h3>
+        <div class="about-showcase" id="aboutShowcase" data-aos="fade-up" data-aos-delay="500">
+            <div class="about-card">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/320x180?text=Di+Sản+Văn+Hóa" alt="Di Sản Văn Hóa">
+                </div>
+                <div class="about-content">
+                    <h4>Di Sản Văn Hóa</h4>
+                    <p>Nhã nhạc cung đình, áo dài Huế, và các lễ hội như Cầu Ngư là những di sản độc đáo.</p>
+                    <button class="cta-button detail-btn" onclick="openDetailModal('Di Sản Văn Hóa', 'Huế là cái nôi của nhã nhạc cung đình - di sản UNESCO, cùng áo dài tím thanh lịch và các lễ hội truyền thống như Cầu Ngư, phản ánh sự phong phú của văn hóa cố đô.')">Xem chi tiết</button>
+                </div>
+            </div>
+            <div class="about-card" data-aos-delay="100">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/320x180?text=Điểm+Đến+Du+Lịch" alt="Điểm Đến Du Lịch">
+                </div>
+                <div class="about-content">
+                    <h4>Điểm Đến Du Lịch</h4>
+                    <p>Đại Nội, sông Hương, và các lăng tẩm là những điểm đến không thể bỏ qua.</p>
+                    <button class="cta-button detail-btn" onclick="openDetailModal('Điểm Đến Du Lịch', 'Khám phá Đại Nội - kinh thành triều Nguyễn, sông Hương thơ mộng, và các lăng tẩm hoàng gia như lăng Khải Định, lăng Tự Đức.')">Xem chi tiết</button>
+                </div>
+            </div>
+            <div class="about-card" data-aos-delay="200">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/320x180?text=Ẩm+Thực+Đặc+Sắc" alt="Ẩm Thực Đặc Sắc">
+                </div>
+                <div class="about-content">
+                    <h4>Ẩm Thực Đặc Sắc</h4>
+                    <p>Bún bò, bánh bèo, và chè Huế mang hương vị tinh tế, đậm chất cung đình.</p>
+                    <button class="cta-button detail-btn" onclick="openDetailModal('Ẩm Thực Đặc Sắc', 'Ẩm thực Huế nổi bật với bún bò cay nồng, bánh bèo mềm mịn, và các loại chè thanh ngọt, thể hiện sự tinh tế trong chế biến.')">Xem chi tiết</button>
+                </div>
+            </div>
+            <div class="about-card" data-aos-delay="300">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/320x180?text=Sự+Kiện+Văn+Hóa" alt="Sự Kiện Văn Hóa">
+                </div>
+                <div class="about-content">
+                    <h4>Sự Kiện Văn Hóa</h4>
+                    <p>Festival Huế và ca Huế trên sông là những trải nghiệm văn hóa độc đáo.</p>
+                    <button class="cta-button detail-btn" onclick="openDetailModal('Sự Kiện Văn Hóa', 'Festival Huế, tổ chức hai năm một lần, cùng ca Huế trên thuyền rồng là những sự kiện văn hóa đặc sắc, thu hút du khách toàn cầu.')">Xem chi tiết</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Modal -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content scale-in">
+            <span class="close-modal" onclick="closeDetailModal()">×</span>
+            <h3 id="detailTitle"></h3>
+            <p id="detailDesc"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Huế Heritage</h4>
+                <p>Nền tảng chia sẻ văn hóa và di sản của cố đô Huế.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Liên Kết Nhanh</h4>
+                <p><a href="#about">Giới Thiệu</a></p>
+                <p><a href="#history">Lịch sử</a></p>
+                <p><a href="culture.html">Văn Hóa</a></p>
+                <p><a href="tourism.html">Du Lịch</a></p>
+                <p><a href="events.html">Sự Kiện</a></p>
+                <p></p><a href="contact.html">Liên Hệ</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Thông Tin</h4>
+                <p>Huế, Thừa Thiên Huế</p>
+                <p>+84 234 123 456</p>
+                <p>info@hue-heritage.vn</p>
+                <p>www.hue-heritage.vn</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Huế Heritage. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

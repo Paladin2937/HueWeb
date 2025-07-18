@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Du Lịch - Huế Heritage</title>
+    <link rel="icon" href="images/Logo-1.png" type="image/png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="loader"></div>
+        <h2>Huế Heritage</h2>
+        <p>Đang tải nội dung...</p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">Huế Heritage</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+          <li><a href="cuisine.html" class="nav-link">Ẩm Thực</a></li>
+          <li><a href="culture.html" class="nav-link">Văn Hóa</a></li>
+          <li><a href="tourism.html" class="nav-link active">Du Lịch</a></li>
+          <li><a href="events.html" class="nav-link">Sự Kiện</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Dịch vụ</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="tour-guide.html" class="nav-link">Hướng Dẫn Du Lịch</a>
+              </li>
+              <li><a href="tour-booking.html" class="nav-link">Đặt Tour</a></li>
+              <li><a href="hotel.html" class="nav-link">Khách Sạn</a></li>
+              <li><a href="transport.html" class="nav-link">Phương tiện</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weatherWidget">
+      <div class="weather-header">
+        <img id="weatherIcon" src="" alt="Weather Icon" />
+        <h3>Thời tiết Huế</h3>
+      </div>
+      <div class="weather-temp" id="weatherTemp">--°C</div>
+      <div class="weather-desc" id="weatherDesc">Đang tải...</div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      <span id="notificationText"></span>
+    </div>
+    <!--Section-->
+    <section class="section tourism-section" id="tourism">
+      <h2 data-aos="fade-up">Khám Phá Du Lịch Huế</h2>
+      <div class="tourism-grid">
+        <!-- Địa điểm 1 -->
+        <div class="tourism-item" data-aos="fade-right">
+          <img
+            src="https://khamphahue.com.vn/Portals/0/Media/T7/upload/VHDL/VanHoa/TinTucVanHoa/2017/T4/DaiNoiVeDem/KPH_Dai-noi-mo-cua-ve-dem_015.jpg"
+            alt="Đại Nội Huế"
+          />
+          <div class="tourism-info">
+            <h3>Đại Nội Huế</h3>
+            <p>
+              Đại Nội là trung tâm quyền lực của triều Nguyễn, với kiến trúc
+              cung điện cổ kính và không gian linh thiêng.
+            </p>
+            <ul>
+              <li><strong>Địa chỉ:</strong> Đường 23/8, TP. Huế</li>
+              <li><strong>Giờ mở cửa:</strong> 7:00 - 17:30</li>
+              <li><strong>Giá vé:</strong> 150.000 VNĐ/người</li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Đại Nội Huế', 'Đại Nội là khu phức hợp di tích lịch sử gồm Tử Cấm Thành, Ngọ Môn, Điện Thái Hòa. Nơi đây lưu giữ nhiều giá trị văn hóa độc đáo của triều Nguyễn.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <!-- Địa điểm 2 -->
+        <div class="tourism-item reverse" data-aos="fade-left">
+          <img
+            src="https://cahuetrensonghuong.com/wp-content/uploads/2024/07/z5391414460273_1b4a1aac3895fc8887f414d254626883.jpg.webp"
+            alt="Sông Hương"
+          />
+          <div class="tourism-info">
+            <h3>Sông Hương</h3>
+            <p>
+              Sông Hương chảy ngang qua thành phố như một biểu tượng thơ mộng.
+              Du khách có thể du thuyền và nghe ca Huế buổi tối.
+            </p>
+            <ul>
+              <li><strong>Địa điểm:</strong> Trung tâm TP. Huế</li>
+              <li><strong>Hoạt động:</strong> Du thuyền, nghe ca Huế</li>
+              <li><strong>Giá vé:</strong> ~100.000 VNĐ/người</li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Sông Hương', 'Sông Hương là dòng sông nổi tiếng của Huế, gắn liền với văn hóa và lịch sử. Du khách có thể thưởng ngoạn cảnh đẹp và nghe ca Huế trên thuyền.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <!-- Địa điểm 3 -->
+        <div class="tourism-item" data-aos="fade-right">
+          <img
+            src="https://husta.vn/wp-content/uploads/2021/11/a07a8cf87821b17fe830-1.jpg"
+            alt="Chùa Thiên Mụ"
+          />
+          <div class="tourism-info">
+            <h3>Chùa Thiên Mụ</h3>
+            <p>
+              Chùa cổ bên sông Hương, nổi bật với tháp Phước Duyên 7 tầng – là
+              biểu tượng văn hóa – tâm linh của Huế.
+            </p>
+            <ul>
+              <li><strong>Địa chỉ:</strong> Đường Kim Long, TP. Huế</li>
+              <li><strong>Phí vào cổng:</strong> Miễn phí</li>
+              <li><strong>Không gian:</strong> Thanh tịnh, cổ kính</li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Chùa Thiên Mụ', 'Chùa Thiên Mụ được xây năm 1601 bởi chúa Nguyễn Hoàng, là điểm đến tâm linh và có kiến trúc đặc sắc.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+        <!-- Địa điểm 4 -->
+        <div class="tourism-item reverse" data-aos="fade-left">
+          <img
+            src="https://mia.vn/media/uploads/blog-du-lich/lang-tu-duc-noi-an-giac-day-nha-nhan-cua-vi-vua-uyen-bac-voi-tam-hon-thi-si-1-1638784138.jpg"
+            alt="Lăng Tự Đức"
+          />
+          <div class="tourism-info">
+            <h3>Lăng Tự Đức</h3>
+            <p>
+              Lăng Tự Đức nổi bật với kiến trúc hài hòa giữa thiên nhiên và con
+              người, là nơi yên nghỉ của vua Tự Đức.
+            </p>
+            <ul>
+              <li><strong>Địa chỉ:</strong> Thủy Xuân, TP. Huế</li>
+              <li><strong>Giá vé:</strong> 100.000 VNĐ/người</li>
+              <li><strong>Giờ mở cửa:</strong> 7:00 - 17:30</li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Lăng Tự Đức', 'Lăng Tự Đức là một trong những lăng tẩm đẹp nhất triều Nguyễn, được bao quanh bởi hồ nước và rừng cây, mang đậm chất thơ và triết lý sống của vị vua tài hoa.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <!-- Địa điểm 5 -->
+        <div class="tourism-item" data-aos="fade-right">
+          <img
+            src="https://hue.gov.vn/Portals/0/Medias/Nam2022/T7/Anh%201(1)_12_7_2022_15_15_26_375_CH.jpg"
+            alt="Chợ Đông Ba"
+          />
+          <div class="tourism-info">
+            <h3>Chợ Đông Ba</h3>
+            <p>
+              Chợ Đông Ba là khu chợ lớn nhất tại Huế, nơi du khách có thể mua
+              sắm đặc sản và trải nghiệm không khí địa phương.
+            </p>
+            <ul>
+              <li><strong>Địa chỉ:</strong> Trần Hưng Đạo, TP. Huế</li>
+              <li><strong>Giờ hoạt động:</strong> 6:00 - 18:00</li>
+              <li>
+                <strong>Đặc sản nổi bật:</strong> Mè xửng, nón bài thơ, mắm Huế
+              </li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Chợ Đông Ba', 'Chợ Đông Ba là biểu tượng văn hóa và thương mại, bạn có thể mua đặc sản Huế, trải nghiệm ẩm thực đường phố và hòa mình vào nhịp sống địa phương.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <!-- Địa điểm 6 -->
+        <div class="tourism-item reverse" data-aos="fade-left">
+          <img
+            src="https://media.vietravel.com/images/Content/cau-truong-tien-hue-1.jpg"
+            alt="Cầu Tràng Tiền"
+          />
+          <div class="tourism-info">
+            <h3>Cầu Tràng Tiền</h3>
+            <p>
+              Cầu Tràng Tiền là biểu tượng của TP. Huế, nối đôi bờ Sông Hương
+              với thiết kế cổ kính và hệ thống chiếu sáng lung linh về đêm.
+            </p>
+            <ul>
+              <li><strong>Vị trí:</strong> Trung tâm TP. Huế</li>
+              <li><strong>Đặc điểm:</strong> 6 nhịp vòm thép, dài 402m</li>
+              <li>
+                <strong>Thời điểm đẹp:</strong> Buổi tối (đèn chiếu sáng đổi
+                màu)
+              </li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Cầu Tràng Tiền', 'Cầu Tràng Tiền là cây cầu nổi tiếng bắc qua sông Hương, từng chứng kiến nhiều biến động lịch sử và là nơi tuyệt vời để ngắm hoàng hôn.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+        <!-- Địa điểm 7 -->
+        <div class="tourism-item" data-aos="fade-right">
+          <img
+            src="https://owa.bestprice.vn/images/destinations/uploads/bai-bien-thuan-an-600f92ff6a358.jpg"
+            alt="Biển Thuận An"
+          />
+          <div class="tourism-info">
+            <h3>Biển Thuận An</h3>
+            <p>
+              Biển Thuận An cách trung tâm Huế khoảng 15km, nổi tiếng với bãi
+              cát trắng và làn nước trong xanh.
+            </p>
+            <ul>
+              <li><strong>Địa chỉ:</strong> Phú Vang, TP. Huế</li>
+              <li>
+                <strong>Hoạt động:</strong> Tắm biển, ngắm hoàng hôn, thưởng
+                thức hải sản
+              </li>
+              <li><strong>Thời điểm đẹp:</strong> Tháng 4 - 9</li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Biển Thuận An', 'Biển Thuận An là điểm nghỉ mát lý tưởng với vẻ đẹp nguyên sơ, gần gũi thiên nhiên, rất được người dân địa phương và du khách yêu thích.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <!-- Địa điểm 8 -->
+        <div class="tourism-item reverse" data-aos="fade-left">
+          <img
+            src="https://i2.ex-cdn.com/crystalbay.com/files/content/2024/10/02/dien-hon-chen-115-1543.jpeg"
+            alt="Điện Hòn Chén"
+          />
+          <div class="tourism-info">
+            <h3>Điện Hòn Chén</h3>
+            <p>
+              Điện Hòn Chén là nơi thờ mẫu Thiên Y A Na, mang đậm tín ngưỡng dân
+              gian và kiến trúc độc đáo trên núi.
+            </p>
+            <ul>
+              <li><strong>Địa chỉ:</strong> Núi Ngọc Trản, Huế</li>
+              <li><strong>Lễ hội:</strong> Tháng 3 & 7 âm lịch</li>
+              <li>
+                <strong>Hoạt động:</strong> Tham quan, cúng lễ, ngắm cảnh sông
+                Hương
+              </li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Điện Hòn Chén', 'Điện Hòn Chén là điểm đến tâm linh và cảnh quan độc đáo, tọa lạc trên núi nhìn ra sông Hương, gắn với tín ngưỡng thờ Mẫu tại miền Trung.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <div class="tourism-item" data-aos="fade-right">
+          <img
+            src="https://ik.imagekit.io/tvlk/blog/2023/08/pha-tam-giang-7.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2"
+            alt="Phá Tam Giang"
+          />
+          <div class="tourism-info">
+            <h3>Phá Tam Giang</h3>
+            <p>
+              Phá Tam Giang là hệ đầm phá lớn nhất Đông Nam Á, nổi bật với khung
+              cảnh hoàng hôn rực rỡ, hệ sinh thái đa dạng và cuộc sống làng chài
+              độc đáo.
+            </p>
+            <ul>
+              <li>
+                <strong>Địa chỉ:</strong> Huyện Quảng Điền, cách TP. Huế khoảng
+                15km
+              </li>
+              <li>
+                <strong>Điểm nổi bật:</strong> Ngắm hoàng hôn, trải nghiệm chợ
+                nổi, du lịch sinh thái
+              </li>
+              <li>
+                <strong>Trải nghiệm nên thử:</strong> Ăn hải sản trên nhà chồ,
+                chèo thuyền, chụp ảnh lúc hoàng hôn
+              </li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Phá Tam Giang', 'Phá Tam Giang là địa điểm lý tưởng cho những ai yêu thiên nhiên và thích khám phá nét văn hóa làng chài xứ Huế. Đây là nơi có cảnh hoàng hôn được mệnh danh là đẹp nhất Việt Nam.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+        <div class="tourism-item reverse" data-aos="fade-left">
+          <img
+            src="https://i2.ex-cdn.com/crystalbay.com/files/content/2024/08/22/doi-vong-canh-4-0934.jpg"
+            alt="Đồi Vọng Cảnh"
+          />
+          <div class="tourism-info">
+            <h3>Đồi Vọng Cảnh</h3>
+            <p>
+              Đồi Vọng Cảnh là điểm ngắm cảnh tuyệt đẹp tại Huế, nơi có thể nhìn
+              toàn cảnh Sông Hương, núi non trùng điệp và các lăng tẩm cổ kính.
+            </p>
+            <ul>
+              <li><strong>Địa chỉ:</strong> Gần Lăng Tự Đức, TP. Huế</li>
+              <li>
+                <strong>Thời điểm lý tưởng:</strong> Bình minh hoặc hoàng hôn
+              </li>
+              <li>
+                <strong>Trải nghiệm:</strong> Ngắm cảnh, chụp ảnh, dã ngoại
+              </li>
+            </ul>
+            <button
+              class="cta-button"
+              onclick="openDetailModal('Đồi Vọng Cảnh', 'Đồi Vọng Cảnh từng là nơi nghỉ ngơi của vua chúa, nổi tiếng với khung cảnh nên thơ, là điểm ngắm cảnh lãng mạn nhất xứ Huế.')"
+            >
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal" id="detailModal">
+      <div class="modal-content scale-in">
+        <span class="close-modal" onclick="closeDetailModal()">×</span>
+        <h3 id="detailTitle"></h3>
+        <p id="detailDesc"></p>
+      </div>
+    </div>
+
+    <!-- Detail Modal -->
+    <div class="modal" id="detailModal">
+      <div class="modal-content scale-in">
+        <span class="close-modal" onclick="closeDetailModal()">×</span>
+        <h3 id="detailTitle"></h3>
+        <p id="detailDesc"></p>
+      </div>
+    </div>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-crown"></i> Huế Heritage</h4>
+            <p>
+              Nền tảng chia sẻ văn hóa và di sản của cố đô Huế. Chúng tôi cam kết
+              bảo tồn và quảng bá những giá trị văn hóa quý báu của dân tộc.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Liên Kết Nhanh</h4>
+            <p><a href="about.html">Giới Thiệu</a></p>
+            <p><a href="culture.html">Địa điểm</a></p>
+            <p><a href="cuisine.html">Ẩm Thực</a></p>
+            <p><a href="#contact">Liên Hệ</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Dịch Vụ</h4>
+            <p><a href="tour-guide.html">Hướng Dẫn Du Lịch</a></p>
+            <p><a href="tour-booking.html">Đặt Tour</a></p>
+            <p><a href="hotel.html">Khách Sạn</a></p>
+            <p><a href="transport.html">Phương tiện</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Thông Tin</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế</p>
+            <p><i class="fas fa-phone"></i> +84 942 972 709</p>
+            <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2025 Huế Heritage. Tất cả quyền được bảo lưu. | Thiết kế bởi Huế
+            Heritage Team
+          </p>
+        </div>
+      </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
