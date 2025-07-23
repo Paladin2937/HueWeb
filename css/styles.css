@@ -957,6 +957,24 @@ body {
 .timeline-item:nth-child(even)::before {
     left: -10px;
 }
+.timeline-img {
+    margin-top: 16px;
+    max-width: 100%;
+    width: 600px; /* ảnh to rõ ràng hơn */
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .timeline-img:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  
 
 @media (max-width: 768px) {
     .timeline::before {
@@ -1388,10 +1406,36 @@ body {
     color: var(--text-light);
     margin-bottom: 2rem;
 }
-
+.about-intro p {
+    font-size: 1.25rem; /* hoặc 20px */
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  
 .cta-buttons {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
+/* Style cho filter bar */
+.filter-bar select {
+    padding: 10px 16px;
+    border: 2px solid #800080; /* Viền tím */
+    border-radius: 8px;         /* Bo nhẹ hình chữ nhật */
+    background-color: #f8f0ff;  /* Màu nền tím nhạt */
+    color: #4a004a;             /* Màu chữ tím đậm */
+    font-size: 16px;
+    margin: 10px;
+    outline: none;
+    transition: 0.3s ease;
+  }
+  
+  /* Hover + focus */
+  .filter-bar select:hover,
+  .filter-bar select:focus {
+    background-color: #e4d0ff;
+    border-color: #9900cc;
+    box-shadow: 0 0 5px rgba(153, 0, 204, 0.4);
+  }
+  

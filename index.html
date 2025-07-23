@@ -77,9 +77,15 @@
             </button>
         </nav>
     </header>
-
+   
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="slideshow-background">
+            <div id="slide1" class="active" style="background-image: url('https://cdn-media.sforum.vn/storage/app/media/ctvseo_MH/%E1%BA%A3nh%20%C4%91%E1%BA%B9p%20Hu%E1%BA%BF/anh-dep-hue-thumbnail.jpg');"></div>
+            <div id="slide2" style="background-image: url('https://static.vinwonders.com/production/OWpyp4tN-check-in-hue-banner.jpg');"></div>
+            <div id="slide3" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1715247598/dsrfwm7gzt4skwajzkay.webp');"></div>
+            <div id="slide4" style="background-image: url('https://vcdn1-dulich.vnecdn.net/2022/04/19/du-lich-Hue-9604-1650366420.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=Zx29jTY1DOW5rCkcxVkmAQ');"></div>
+        </div>
       <div class="floating-element"></div>
       <div class="floating-element"></div>
       <div class="floating-element"></div>
@@ -103,7 +109,8 @@
         </div>
       </div>
     </section>
-
+    
+   
     <!-- Stats Section -->
     <section id="stats" class="stats-section section fade-in">
       <div class="stats-grid">
@@ -189,7 +196,7 @@
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery-section section fade-in">
-      <h2>Địa điểm</h2>
+      <h2>Địa điểm nổi tiếng</h2>
       <div class="gallery-grid">
         <div
           class="gallery-item"
@@ -408,7 +415,7 @@
             </div>
             <div>
               <h4>Email</h4>
-              <p>phutrong2937@gmail.com<br />tammath@gmail.com</p>
+              <p>phutrong2937@gmail.com<br />tammath79@gmail.com</p>
             </div>
           </div>
           <div class="contact-item">
@@ -460,7 +467,7 @@
           <h4>Thông Tin</h4>
           <p><i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế</p>
           <p><i class="fas fa-phone"></i> +84 942 972 709</p>
-          <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+          <p><i class="fas fa-envelope"></i> tammath79@gmail.com</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -526,6 +533,18 @@
     </div>
 
     <!-- Scripts -->
+    <script>
+        let slideIndex = 0;
+const slides = document.querySelectorAll('.slideshow-background div');
+
+function showSlides() {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[slideIndex].classList.add('active');
+  slideIndex = (slideIndex + 1) % slides.length;
+  setTimeout(showSlides, 5000);
+}
+showSlides();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
   </body>

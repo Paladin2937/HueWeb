@@ -339,7 +339,7 @@
             <h4>Thông Tin</h4>
             <p><i class="fas fa-map-marker-alt"></i> Phong Thái, Phong Điền,TP Huế</p>
             <p><i class="fas fa-phone"></i> +84 942 972 709</p>
-            <p><i class="fas fa-envelope"></i> tammath@gmail.com</p>
+            <p><i class="fas fa-envelope"></i> tammath79@gmail.com</p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -354,7 +354,36 @@
     <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
       <i class="fas fa-arrow-up"></i>
     </button>
+    <script>
+          // Hàm lọc món ăn
+  function filterFoods() {
+    const categoryValue = document.getElementById("categoryFilter").value;
+    const priceValue = document.getElementById("priceFilter").value;
+    const foodCards = document.querySelectorAll(".food-showcase .food-card");
 
+    foodCards.forEach((card) => {
+      const category = card.getAttribute("data-category");
+      const price = card.getAttribute("data-price");
+
+      const matchCategory = categoryValue === "all" || categoryValue === category;
+      const matchPrice = priceValue === "all" || priceValue === price;
+
+      if (matchCategory && matchPrice) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  // Gắn sự kiện khi chọn thay đổi
+  document.getElementById("categoryFilter").addEventListener("change", filterFoods);
+  document.getElementById("priceFilter").addEventListener("change", filterFoods);
+
+  // Gọi hàm lọc khi trang tải xong
+  window.addEventListener("DOMContentLoaded", filterFoods);
+
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
